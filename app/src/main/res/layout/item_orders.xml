@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ly_itemOrderRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/line_bottom_gray"
+    android:orientation="vertical"
+    android:paddingTop="12dp"
+    tools:ignore="RtlHardcoded">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4.5"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.turgayulutas.marketim.View.Custom.CustomTextView
+                android:id="@+id/tv_itemOrderDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="40sp"
+                app:typeface="ProductSans_Regular" />
+
+            <com.turgayulutas.marketim.View.Custom.CustomTextView
+                android:id="@+id/tv_itemOrderMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:typeface="ProductSans_Medium" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/line_left_gray"
+            android:orientation="vertical"
+            android:paddingStart="12dp"
+            android:paddingLeft="12dp"
+            android:paddingEnd="12dp"
+            android:paddingRight="12dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.turgayulutas.marketim.View.Custom.CustomTextView
+                    android:id="@+id/tv_itemOrderName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/img_orderArrow"
+                    android:layout_toLeftOf="@+id/img_orderArrow"
+                    android:textSize="17sp"
+                    app:typeface="ProductSans_Bold" />
+
+                <ImageView
+                    android:id="@+id/img_orderArrow"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="end"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/ic_right_arrow_black_24dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.turgayulutas.marketim.View.Custom.CustomTextView
+                    android:id="@+id/tv_itemOrderProductName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/tv_itemOrderProductPrice"
+                    android:layout_toLeftOf="@+id/tv_itemOrderProductPrice"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textSize="15sp"
+                    app:typeface="ProductSans_Regular" />
+
+                <com.turgayulutas.marketim.View.Custom.CustomTextView
+                    android:id="@+id/tv_itemOrderProductPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="end"
+                    android:textSize="20sp"
+                    app:typeface="ProductSans_Bold" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/img_productState"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp" />
+
+                <com.turgayulutas.marketim.View.Custom.CustomTextView
+                    android:id="@+id/tv_itemOrderProductState"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    app:typeface="ProductSans_Regular" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="#0D000000"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4.5" />
+
+        <RelativeLayout
+            android:id="@+id/rl_productDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="gone">
+
+            <com.turgayulutas.marketim.View.Custom.CustomTextView
+                android:id="@+id/tv_itemProductDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/tv_itemOrderSummaryPrice"
+                android:padding="8dp"
+                android:textSize="16sp"
+                app:typeface="ProductSans_Medium" />
+
+            <com.turgayulutas.marketim.View.Custom.CustomTextView
+                android:id="@+id/tv_itemOrderSummaryPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="end"
+                android:layout_marginRight="12dp"
+                android:textSize="20sp"
+                app:typeface="ProductSans_Bold" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

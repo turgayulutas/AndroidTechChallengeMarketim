@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Marketim</string>
+    <string name="user_name">Kullanıcı Adı</string>
+    <string name="password">Şifre</string>
+    <string name="sign_in">Giriş</string>
+    <string name="remember_me">Beni Hatırla</string>
+    <string name="empty_username">Kullanıcı adı boş olamaz!</string>
+    <string name="default_username">kariyer</string>
+    <string name="wrong_username">Hatalı kullanıcı adı!</string>
+    <string name="default_password">2019ADev</string>
+    <string name="wrong_password">Şifre hatalı</string>
+    <string name="empty_password">Parola boş olamaz!</string>
+    <string name="my_orders">Siparişlerim</string>
+    <string name="loading">Siparişlerim yükleniyor..</string>
+    <string name="wrong_username_or_password">Hatalı kullanıcı adı veya şifre</string>
+    <string name="caps_app_name">MARKETİM</string>
+    <string name="an_error_occured">Sevise bağlanırken bir hata oluştu.</string>
+</resources>

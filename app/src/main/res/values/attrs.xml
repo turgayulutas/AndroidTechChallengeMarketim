@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomViews">
+        <attr name="typeface" />
+    </declare-styleable>
+
+    <attr name="typeface" format="enum">
+        <enum name="ProductSans_Black" value="0" />
+        <enum name="ProductSans_BlackItalic" value="1" />
+        <enum name="ProductSans_Bold" value="2" />
+        <enum name="ProductSans_BoldItalic" value="3" />
+        <enum name="ProductSans_Italic" value="4" />
+        <enum name="ProductSans_Light" value="5" />
+        <enum name="ProductSans_LightItalic" value="6" />
+        <enum name="ProductSans_Medium" value="7" />
+        <enum name="ProductSans_MediumItalic" value="8" />
+        <enum name="ProductSans_Regular" value="9" />
+        <enum name="ProductSans_Thin" value="10" />
+        <enum name="ProductSans_ThinItalic" value="11" />
+    </attr>
+
+</resources>

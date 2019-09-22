@@ -3,11 +3,11 @@ Android Tech Challenge
 
 
 # 3rd party libraries
-* Retrofit 2
+* Retrofit 2 --
 Api ile haberleşmek için kullanıldı.
 
-* RxJava
+* RxJava -- 
 Retrofit 2'yle beraber asenkron ve güçlü fonksiyonellik için kullamnıl
 
-* Gson
+* Gson --
 Apiden dönen JSON datanın modellenmesi için kullanıldı.

@@ -15,4 +15,7 @@
     <string name="wrong_username_or_password">Hatalı kullanıcı adı veya şifre</string>
     <string name="caps_app_name">MARKETİM</string>
     <string name="an_error_occured">Sevise bağlanırken bir hata oluştu.</string>
+    <string name="log_out_message">Çıkış yapmak istiyor musunuz?</string>
+    <string name="yes_i_do">İstiyorum</string>
+    <string name="cancel">Vazgeç</string>
 </resources>

@@ -1,5 +1,7 @@
 package com.turgayulutas.marketim.View.Ui;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -37,7 +39,7 @@ public class MyOrdersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_orders);
 
-        Toolbar toolbar =  findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         mRec_myOrderList = findViewById(R.id.rec_myOrdersList);
         mRec_myOrderList.setLayoutManager(new LinearLayoutManager(this));
@@ -80,10 +82,27 @@ public class MyOrdersActivity extends AppCompatActivity {
 
     public void logOut(View view) {
         /*
-         * Çıkış yaparken "Beni hatırla" fonksiyonun devre dışı kalması için Preferences datasının temizlenmesi
+         * Çıkış sırasında dialog onay alınması onay durumunda; "Beni hatırla" fonksiyonun devre dışı kalması için Preferences datasının temizlenmesi
          */
-        Preferences.clearData(this);
-        startActivity(new Intent(this, LoginActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
-        finish();
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        DialogInterface.OnClickListener dialogClickListener = (dialog, which) -> {
+            switch (which) {
+                case DialogInterface.BUTTON_POSITIVE:
+                    Preferences.clearData(this);
+                    startActivity(new Intent(this, LoginActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+                    finish();
+                    break;
+
+                case DialogInterface.BUTTON_NEGATIVE:
+                    dialog.cancel();
+                    break;
+            }
+        };
+
+        builder.setMessage(getResources().getString(R.string.log_out_message))
+                .setPositiveButton(getResources().getString(R.string.yes_i_do), dialogClickListener)
+                .setNegativeButton(getResources().getString(R.string.cancel), dialogClickListener).show();
     }
 }

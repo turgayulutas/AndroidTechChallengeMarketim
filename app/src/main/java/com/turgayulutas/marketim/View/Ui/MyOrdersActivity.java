@@ -86,7 +86,6 @@ public class MyOrdersActivity extends AppCompatActivity {
          */
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-
         DialogInterface.OnClickListener dialogClickListener = (dialog, which) -> {
             switch (which) {
                 case DialogInterface.BUTTON_POSITIVE:
